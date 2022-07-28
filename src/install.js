@@ -1,9 +1,12 @@
 import FirstComp from './components/FirstComp.vue'
+import SecondComp from './components/SecondComp.vue'
 
 function install(Vue) {
 	if (install.installed) return;
 	install.installed = true;
 	Vue.component("first-comp", FirstComp);
+	Vue.component("second-comp", SecondComp);
+	
 }
 
 const plugin = {
@@ -21,7 +24,8 @@ if (GlobalVue) {
 }
 
 FirstComp.install = install;
+SecondComp.install = install;
 
 export {
-    FirstComp
+    FirstComp, SecondComp
 };

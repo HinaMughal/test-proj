@@ -1,7 +1,7 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: Build Package
+name: Publish
 
 on:
   push:
@@ -24,11 +24,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        registry-url: npm publish --registry http://10.10.1.210:8022/repository/pkg-release/
-    - run: npm i
-    - run: npm run build-library --if-present
+        registry-url: http://10.10.1.210:8022/repository/pkg-release/
 
     - name: Publish Package to Nexus Repo
       run: npm publish --registry http://10.10.1.210:8022/repository/pkg-release/
+      env:
+        NEXUS_AUTH_TOKEN: ${{secrets.NEXUS_AUTH_TOKEN}}
 
 

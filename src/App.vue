@@ -1,14 +1,17 @@
 <template>
   <HelloWorld msg="Demo Vue.js App"/>
+  <SecondCom />
 </template>
 
 <script>
 import HelloWorld from './components/FirstComp.vue'
+import SecondCom from './components/SecondComp.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    SecondCom
   }
 }
 </script>

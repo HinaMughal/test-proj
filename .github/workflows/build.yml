@@ -24,11 +24,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        registry-url: npm publish --registry http://10.10.1.210:8022/repository/pkg-release/
+  
     - run: npm i
     - run: npm run build-library --if-present
-
-    - name: Publish Package to Nexus Repo
-      run: npm publish --registry http://10.10.1.210:8022/repository/pkg-release/
-
-

@@ -1,0 +1,23 @@
+{
+  "name": "testproj",
+  "version": "0.1.0",
+  "private": false,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build-library": "vue-cli-service build --target lib --name testproj ./src/install.js"
+  },
+  "main": "./dist/testproj.common.js",
+  "files": [
+    "dist/*"
+  ],
+  "keywords": ["vue2", "buttons"],
+  "dependencies": {
+    "core-js": "^3.8.3",
+    "vue": "^3.2.13"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~5.0.0",
+    "@vue/cli-service": "~5.0.0"
+  }
+}

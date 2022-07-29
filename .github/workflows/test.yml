@@ -27,8 +27,8 @@ jobs:
         # registry-url: http://10.10.1.210:8022/repository/pkg-release/
 
     - name: Publish Package to Nexus Repo
-       uses: HinaMughal/test-proj@main
-       with:
+      uses: repository/pkg-release
+      with:
         serverUrl: http://10.10.1.210:8022/
         username: admin
         password: admin123

@@ -36,10 +36,10 @@ jobs:
         # target: ./target/
 
     # - run: npm config set registry http://10.10.1.210:8022/repository/pkg-group/
-    - run: npm adduser --registry=http://10.10.1.210:8022/repository/pkg-release/
+    # - run: npm adduser --registry=http://10.10.1.210:8022/repository/pkg-release/
     # - run: npm login
-    - run: admin
-    - run: admin123
+    # - run: admin
+    # - run: admin123
     - run: npm login
     - run: admin
     - run: admin123 

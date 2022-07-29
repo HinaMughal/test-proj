@@ -15,6 +15,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
+
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -40,6 +41,7 @@ jobs:
     # - run: npm login
     # - run: admin
     # - run: admin123
+    - run: npm config rm proxy
     - run: npm login --registry http://10.10.1.210:8022/repository/pkg-release/
     - run: admin
     - run: admin123 

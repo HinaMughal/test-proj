@@ -27,7 +27,7 @@ jobs:
   
     - run: npm i
     - run: npm run build-library --if-present
-    - uses: npm login --registry http://10.10.1.210:8022/repository/pkg-release/
+    - uses: http://10.10.1.210:8022/repository/pkg-release/
       with:
         username: admin
         password: admin123

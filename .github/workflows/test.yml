@@ -26,17 +26,20 @@ jobs:
         cache: 'npm'
         # registry-url: http://10.10.1.210:8022/repository/pkg-release/
 
-    - name: Publish Package to Nexus Repo
-      uses: HinaMughal/test-proj@v0
-      with:
-        serverUrl: http://10.10.1.210:8022/
-        username: admin
-        password: admin123
-        format: npm
-        repository: pkg-release
+    # - name: Publish Package to Nexus Repo
+    #   uses: HinaMughal/test-proj@0.1.0
+    #   with:
+    #     serverUrl: http://10.10.1.210:8022/
+    #     username: admin
+    #     password: admin123
+    #     format: npm
+    #     repository: pkg-release
         # coordinates: directory=nexus-repo-github-action-test-rawrepodir
         # assets: filename=gh-action-test
         # filename: .//testproj
+
+    - name: Nexus Upload
+      run: curl -v -k -u username:${{secrets.NEXUS_AUTH_TOKEN}} npm publish --registry  http://10.10.1.210:8022/repository/pkg-release/
 
 
 #following step of pusblish package to npm public registry by adding        

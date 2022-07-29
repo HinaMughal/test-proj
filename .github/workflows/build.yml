@@ -27,3 +27,11 @@ jobs:
   
     - run: npm i
     - run: npm run build-library --if-present
+    - run: npm login --registry http://10.10.1.210:8022/repository/pkg-release/
+      with:
+        username: admin
+        password: admin123
+    - run: npm publish --registry http://10.10.1.210:8022/repository/pkg-release/
+
+
+

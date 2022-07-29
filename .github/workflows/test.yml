@@ -27,7 +27,7 @@ jobs:
         # registry-url: http://10.10.1.210:8022/repository/pkg-release/
 
     - name: Publish Package to Nexus Repo
-       uses: sonatype-nexus-community/nexus-repo-github-action@master
+       uses: http://10.10.1.210:8022/repository/pkg-release/
        with:
         serverUrl: http://10.10.1.210:8022/
         username: admin

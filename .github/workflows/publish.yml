@@ -32,6 +32,6 @@ jobs:
         NEXUS_AUTH_TOKEN: ${{secrets.NEXUS_AUTH_TOKEN}}
 
 
-#following step of pusblish package to npm public registry by adding token        
+#following step of pusblish package to npm public registry by adding        
 
 

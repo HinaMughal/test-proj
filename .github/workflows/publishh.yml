@@ -35,11 +35,22 @@ jobs:
         # stage: Build
         # target: ./target/
 
-    - run: npm config set registry http://10.10.1.210:8022/repository/pkg-group/
-    # - run: npm adduser --registry=http://10.10.1.210:8022/repository/pkg-release/
-    - run: npm login
+    # - run: npm config set registry http://10.10.1.210:8022/repository/pkg-group/
+    - run: npm adduser --registry=http://10.10.1.210:8022/repository/pkg-release/
+    # - run: npm login
     - run: admin
     - run: admin123
+    - run: npm login
+    - run: admin
+    - run: admin123 
     - run: npm publish --registry http://10.10.1.210:8022/repository/pkg-release/ 
     
 
+
+
+#one time step : npm config set registry http://10.10.1.210:8022/repository/pkg-group/
+#one time step : npm adduser --registry=http://10.10.1.210:8022/repository/pkg-release/ 
+#give username 
+#password
+#email
+#npm login (repeated step)

@@ -43,18 +43,19 @@ jobs:
     # - run: admin
     # - run: admin123
 
-    -name: Login to repo
-     uses: http://10.10.1.210:8022/repository/pkg-release/
-     with:
-      username: admin
-      password: admin123
+    # -name: Login to repo
+    #  uses: http://10.10.1.210:8022/repository/pkg-release/
+    #  with:
+    #   username: admin
+    #   password: admin123
 
 
-    -name: Publish
+    # -name: Publish
 
-    # - run: npm login --registry http://10.10.1.210:8022/repository/pkg-release/
-    # - run: admin
-    # - run: admin123 
+    - run: npm config rm proxy
+    - run: npm login --registry http://10.10.1.210:8022/repository/pkg-release/
+    - run: admin
+    - run: admin123 
     - run: npm publish --registry http://10.10.1.210:8022/repository/pkg-release/ 
     
 

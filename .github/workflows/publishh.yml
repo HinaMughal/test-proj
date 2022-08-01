@@ -26,7 +26,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-        # registry-url: http://10.10.1.210:8022/repository/pkg-release/
+        registry-url: http://10.10.1.210:8022/repository/pkg-group/
 
     - name: Publish Package to Nexus Repo
       uses: sonatype-nexus-community/iq-github-action@master

@@ -31,7 +31,7 @@ jobs:
     - name: Publish Package to Nexus Repo
       uses: sonatype-nexus-community/iq-github-action@master
       with:
-        serverUrl: http://10.10.1.210:8022
+        serverUrl: http://10.10.1.210:8022/repository/pkg-group/
         username: admin
         password: admin123
         # stage: Build

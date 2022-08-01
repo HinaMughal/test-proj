@@ -53,7 +53,8 @@ jobs:
     # -name: Publish
 
     - run: npm config rm proxy
-    - run: npm login --registry http://10.10.1.210:8022/repository/pkg-release/
+    # - run: npm login --registry http://10.10.1.210:8022/repository/pkg-release/
+    - run: npm login --registry http://10.10.1.210:8022/repository/pkg-group/
     - run: admin
     - run: admin123 
     - run: npm publish --registry http://10.10.1.210:8022/repository/pkg-release/ 

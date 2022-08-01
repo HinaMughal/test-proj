@@ -15,7 +15,7 @@ jobs:
     strategy:
       matrix:
         node-version: [16.x]
-      - run: npm config rm proxy
+        - run: npm config rm proxy
 
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
@@ -31,7 +31,7 @@ jobs:
     - name: Publish Package to Nexus Repo
       uses: sonatype-nexus-community/iq-github-action@master
       with:
-        serverUrl: http://10.10.1.210:8022/repository/pkg-group/
+        serverUrl: http://10.10.1.210:8022
         username: admin
         password: admin123
         # stage: Build
